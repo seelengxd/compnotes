@@ -24,6 +24,8 @@ def partition(A, lb, rb):
         # print(A, l, r)
         return r #the new pivot position
 
+#todo improvements: mr leong's code swaps all the l rs in 1 iteration
+
 
 def helper(A, lb, rb):
     split = partition(A, lb, rb)
