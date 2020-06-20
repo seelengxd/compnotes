@@ -10,7 +10,7 @@ def menu(target=None, saveas=None, returnStr=False):
     saveAs - if u want to save the code somewhere, specify file name
     returnStr - if saveAs is false and returnStr is true, u can guess what it does
     """
-    stuff = dict(enumerate(os.listdir(os.path.join(currPath, "h2comp")), 1))
+    stuff = dict(enumerate([file for file in os.listdir(os.path.join(currPath, "h2comp")) if file.endswith(".py")], 1))
     if target is None:
         print("what do u want?")
         for k, v in stuff.items():
@@ -32,3 +32,4 @@ def menu(target=None, saveas=None, returnStr=False):
 
 if __name__ == "__main__":
     menu()
+    print(os.listdir(os.path.join(currPath, "h2comp")))
